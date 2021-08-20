@@ -1,0 +1,36 @@
+{
+    "asset_types": [
+        "Adapters",
+        "Code Libraries",
+        "Code Services",
+        "Collections",
+        "Devices",
+        "Edges",
+        "Portals",
+        "Roles",
+        "Timers",
+        "Triggers",
+        "Users"
+    ],
+    "author": {
+        "email": "yjain@clearblade.com"
+    },
+    "clouds": [],
+    "description": "Created on 2021-01-25 20:16 UTC",
+    "domains": [],
+    "exportRows": false,
+    "gateways": [],
+    "image_url": "https://docs.clearblade.com/v/4/static/img/default_package.png",
+    "keywords": [
+        "clearblade",
+        "iot",
+        "platform"
+    ],
+    "license": "MIT",
+    "name": "phoenix-contact-template",
+    "private": false,
+    "prog_lang": [],
+    "protocols": [],
+    "things": [],
+    "version": "1.0.0"
+}
