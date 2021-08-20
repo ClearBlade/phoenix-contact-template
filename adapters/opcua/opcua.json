@@ -1,0 +1,13 @@
+{
+    "architecture": "linux-armv7",
+    "deploy_command": "",
+    "description": "",
+    "logs_command": "",
+    "name": "opcua",
+    "os": "",
+    "protocol": "",
+    "start_command": "./start.sh -cb_service_account=opcuaAdapter",
+    "status_command": "",
+    "stop_command": "",
+    "undeploy_command": ""
+}
