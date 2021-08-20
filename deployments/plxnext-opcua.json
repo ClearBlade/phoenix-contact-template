@@ -1,0 +1,395 @@
+{
+    "assets": [
+        {
+            "asset_class": "devices",
+            "asset_id": "opcuaAdapter",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "servicecaches",
+            "asset_id": "rule_duration_cache",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "services",
+            "asset_id": "opcuaNormalizer",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "services",
+            "asset_id": "invalidateRulesAndTypes",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "services",
+            "asset_id": "actionEmitter",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "services",
+            "asset_id": "assetHistory",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "services",
+            "asset_id": "assetLocationAndStatus",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "services",
+            "asset_id": "clearDurationCache",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "services",
+            "asset_id": "handleRulesEngineUpdates",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "services",
+            "asset_id": "handleRulesEntityUpdates",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "services",
+            "asset_id": "rulesEngine",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "services",
+            "asset_id": "traverseForInvalidRules",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "groupFilterLib",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "LoggerLib",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "MailgunConstants",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "PasswordResetConfig",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "Base64",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "Mailgun",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "NormalizerLib",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "TwilioSMSLib",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "CryptoLib",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "BandwidthSMSLib",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "SMSConfig",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "conditions",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "groups",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "triggers",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "services",
+            "asset_id": "readOPCUATags",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "adaptors",
+            "asset_id": "opcua",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "adapter_config",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "_asset_history",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": false,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "action_history",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": false,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "action_types",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "actions",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "asset_trees",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "asset_type_tree",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "asset_types",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "assets",
+            "asset_id": "9d4ec112-dd82-4c06-a22f-c0dd16207d03",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "custom_settings",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "event_history",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": false,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "event_types",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "events",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": false,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "rule_types",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "rules",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "system_info",
+            "asset_id": "",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "servicecaches",
+            "asset_id": "AssetTypeCache",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "Teams",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "TeamsConfig",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "mailgunNPM",
+            "deployment": "plxnext-opcua",
+            "member": "plxnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        }
+    ],
+    "description": "",
+    "edges": [
+        "michael-testing",
+        "00-A0-45-A3-CC-46",
+        "42-01-0a-80-00-1c"
+    ],
+    "name": "plxnext-opcua"
+}
