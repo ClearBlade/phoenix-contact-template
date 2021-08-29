@@ -1,0 +1,64 @@
+{
+    "columns": [
+        {
+            "ColumnName": "user_id",
+            "ColumnType": "string",
+            "PK": true
+        },
+        {
+            "ColumnName": "user_type",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "first_name",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "last_name",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "phone",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "photo_url",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "pin",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "areas",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "assets",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "group_ids",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "app_tour",
+            "ColumnType": "jsonb",
+            "PK": false
+        },
+        {
+            "ColumnName": "terms_agreement",
+            "ColumnType": "jsonb",
+            "PK": false
+        }
+    ]
+}

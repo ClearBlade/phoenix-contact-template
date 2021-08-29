@@ -1,6 +1,6 @@
 {
     "architecture": "linux-armv7",
-    "deploy_command": "",
+    "deploy_command": "./deploy.sh $CB_SYSTEM_KEY $CB_SYSTEM_SECRET $CB_SERVICE_ACCOUNT $CB_SERVICE_ACCOUNT_TOKEN",
     "description": "",
     "logs_command": "",
     "name": "opcua",
