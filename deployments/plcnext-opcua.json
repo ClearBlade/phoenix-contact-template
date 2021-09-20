@@ -82,6 +82,14 @@
         },
         {
             "asset_class": "services",
+            "asset_id": "manageOPCUAAdapter",
+            "deployment": "plcnext-opcua",
+            "member": "plcnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "services",
             "asset_id": "rulesEngine",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
