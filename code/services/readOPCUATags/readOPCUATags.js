@@ -40,7 +40,7 @@ function readOPCUATags(req, resp) {
       const rawQuery = "select * from assets where id='" + edgeId + "';";
       log(rawQuery);
       database.query(rawQuery).then(function (res) {
-        node_ids = JSON.parse(res[0].custom_data).opcua_nodeids;
+        node_ids = JSON.parse(res[0].custom_data).nodeIDs;
         log("updated node_ids to: ", node_ids);
 
       }).catch(function (rej) {
