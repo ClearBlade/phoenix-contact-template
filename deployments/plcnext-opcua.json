@@ -298,7 +298,7 @@
         },
         {
             "asset_class": "assets",
-            "asset_id": "9d4ec112-dd82-4c06-a22f-c0dd16207d03",
+            "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
             "sync_to_edge": true,
