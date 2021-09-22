@@ -1,0 +1,25 @@
+{
+    "indexes": {
+        "Total": 0,
+        "Data": []
+    },
+    "items": [],
+    "name": "adapter_config",
+    "schema": [
+        {
+            "ColumnName": "item_id",
+            "ColumnType": "uuid",
+            "PK": true
+        },
+        {
+            "ColumnName": "one",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "two",
+            "ColumnType": "string",
+            "PK": false
+        }
+    ]
+}
