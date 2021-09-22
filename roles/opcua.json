@@ -48,7 +48,7 @@
         "Topics": [
             {
                 "Level": 3,
-                "Name": "#"
+                "Name": "opcua/#"
             }
         ],
         "Triggers": {
