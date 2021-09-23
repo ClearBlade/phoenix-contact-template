@@ -25,7 +25,7 @@ function manageOPCUAAdapter(req, resp) {
   setInterval(function() {
     log("checking if adapter is running");
     try {
-      var results = child_process.execSync("pgrep " + ADAPTER_PROCESS_NAME, {});
+      var results = child_process.execSync("pgrep -f " + ADAPTER_PROCESS_NAME, {});
     } catch (e) {
       if (e.status === 1) {
         log("adapter process not found, starting it");
