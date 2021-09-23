@@ -31,7 +31,7 @@ function opcuaNormalizer(req, resp) {
 
   const OUTGOING_ASSET_MODEL_TOPIC = "_monitor/_asset/<ASSET_ID>/status";
   const OUTGOING_DB_TOPIC = "_dbupdate/_monitor/_asset/<ASSET_ID>/status";
-  const OUTGOING_HISTORY_TOPIC = "_history/_monitor/_asset/<ASSET_ID>/location";
+  const OUTGOING_HISTORY_TOPIC = "_history/_monitor/_asset/<ASSET_ID>";
   
   log("subscribing");
   cbClient.subscribe(OPC_UA_READ_TOPIC, function(topic, msg) {
@@ -96,7 +96,7 @@ function opcuaNormalizer(req, resp) {
       id: assetId,
       custom_data: customData,
       last_updated: msg.timestamp.toISOString(),
-      "type": "plcnext-box-type01"
+      "type": "plc-next"
     };
     log(assetModelMsg);
     if (sendMessage) {
