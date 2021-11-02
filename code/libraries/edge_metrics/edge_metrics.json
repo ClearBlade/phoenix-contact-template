@@ -1,0 +1,7 @@
+{
+    "api": "",
+    "dependencies": "clearblade",
+    "description": "",
+    "name": "edge_metrics",
+    "visibility": "system"
+}
