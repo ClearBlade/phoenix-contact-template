@@ -26,6 +26,22 @@
         },
         {
             "asset_class": "services",
+            "asset_id": "testEdgeMetrics",
+            "deployment": "plcnext-opcua",
+            "member": "plcnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": false
+        },
+        {
+            "asset_class": "services",
+            "asset_id": "getEdgeMetrics",
+            "deployment": "plcnext-opcua",
+            "member": "plcnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": false
+        },
+        {
+            "asset_class": "services",
             "asset_id": "invalidateRulesAndTypes",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
@@ -191,6 +207,14 @@
             "member": "plcnext-opcua_deployment_edge_group",
             "sync_to_edge": true,
             "sync_to_platform": true
+        },
+        {
+            "asset_class": "libraries",
+            "asset_id": "edge_metrics",
+            "deployment": "plcnext-opcua",
+            "member": "plcnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": false
         },
         {
             "asset_class": "conditions",
