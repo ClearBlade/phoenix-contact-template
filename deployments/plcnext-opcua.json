@@ -415,6 +415,14 @@
             "member": "plcnext-opcua_deployment_edge_group",
             "sync_to_edge": true,
             "sync_to_platform": true
+        },
+        {
+            "asset_class": "timers",
+            "asset_id": "edge_metrics_timer",
+            "deployment": "plcnext-opcua",
+            "member": "plcnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": false
         }
     ],
     "description": "",
