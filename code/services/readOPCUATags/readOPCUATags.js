@@ -29,6 +29,7 @@ function readOPCUATags(req, resp) {
   const client = new MQTT.Client();
   const staticPollMillis = 30000;
   var existingTags = [];
+  var intervalIDs = [];
 
   //leave as is, static
   setInterval(adapter_configPoll, staticPollMillis);
@@ -44,41 +45,59 @@ function readOPCUATags(req, resp) {
       database
         .query(rawQuery)
         .then(function (res) {
-          var newTags = JSON.parse(res[0].adapter_settings).tags;
-          log("updated newTags to: ", JSON.stringify(newTags));
-          //check if there's a change
-          if (!arraysEqual(existingTags, newTags)) {
-            existingTags = newTags;
-            var sortedTags = {};
+          if (res.length > 0) {
+            if (JSON.parse(res[0].adapter_settings).tags !== undefined) {
+              var newTags = JSON.parse(res[0].adapter_settings).tags;
+              log("updated newTags to: ", JSON.stringify(newTags));
+              //check if there's a change
+              if (!arraysEqual(existingTags, newTags)) {
+                existingTags = newTags;
+                var sortedTags = {};
 
-            //convert tags to object array with poll rate as key, and each
-            for (var i = 0; i < newTags.length; i++) {
-              if (newTags[i].read_method.type === "polling") {
-                if (!sortedTags.hasOwnProperty(newTags[i].read_method.rate)) {
-                  sortedTags[newTags[i].read_method.rate] = [
-                    newTags[i].node_id,
-                  ];
-                } else {
-                  sortedTags[newTags[i].read_method.rate].push(
-                    newTags[i].node_id
+                //convert tags to object array with poll rate as key, and each
+                for (var i = 0; i < newTags.length; i++) {
+                  if (newTags[i].read_method.type === "polling") {
+                    if (
+                      !sortedTags.hasOwnProperty(newTags[i].read_method.rate)
+                    ) {
+                      sortedTags[newTags[i].read_method.rate] = [
+                        newTags[i].node_id,
+                      ];
+                    } else {
+                      sortedTags[newTags[i].read_method.rate].push(
+                        newTags[i].node_id
+                      );
+                    }
+                  }
+                }
+
+                //clear each existing interval, if there are any
+                if (intervalIDs.length > 0) {
+                  for (var intervalID in intervalIDs) {
+                    clearInterval(intervalID);
+                  }
+                }
+                //for each object key, setInterval to key
+                for (var key in sortedTags) {
+                  //setInterval for each different poll rate
+                  log(
+                    "setting interval of: " +
+                      key +
+                      " for node Ids: " +
+                      sortedTags[key]
+                  );
+                  intervalIDs.push(
+                    setInterval(opcuaPoll(sortedTags[key]), key)
                   );
                 }
+              } else {
+                log("no changes to adapter_config tags");
               }
-            }
-
-            //for each object key, setInterval to key
-            for (var key in sortedTags) {
-              //setInterval for each different poll rate
-              log(
-                "setting interval of: " +
-                  key +
-                  " for node Ids: " +
-                  sortedTags[key]
-              );
-              setInterval(opcuaPoll(sortedTags[key]), key);
+            } else {
+              log("no tags in adapter settings");
             }
           } else {
-            log("no changes to adapter_config tags");
+            log("no response from database");
           }
         })
         .catch(function (rej) {
