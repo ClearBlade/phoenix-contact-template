@@ -87,7 +87,7 @@ function readOPCUATags(req, resp) {
                       sortedTags[key]
                   );
                   intervalIDs.push(
-                    setInterval(opcuaPoll(sortedTags[key]), key)
+                    setInterval(opcuaPoll, key * 1000, sortedTags[key])
                   );
                 }
               } else {
