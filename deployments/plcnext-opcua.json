@@ -121,6 +121,22 @@
             "sync_to_platform": true
         },
         {
+            "asset_class": "services",
+            "asset_id": "readOPCUATags",
+            "deployment": "plcnext-opcua",
+            "member": "plcnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
+            "asset_class": "services",
+            "asset_id": "updateAssetTypeCache",
+            "deployment": "plcnext-opcua",
+            "member": "plcnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
+            "sync_to_platform": true
+        },
+        {
             "asset_class": "libraries",
             "asset_id": "groupFilterLib",
             "deployment": "plcnext-opcua",
@@ -235,14 +251,6 @@
         {
             "asset_class": "triggers",
             "asset_id": "",
-            "deployment": "plcnext-opcua",
-            "member": "plcnext-opcua_deployment_edge_group",
-            "sync_to_edge": true,
-            "sync_to_platform": true
-        },
-        {
-            "asset_class": "services",
-            "asset_id": "readOPCUATags",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
             "sync_to_edge": true,
