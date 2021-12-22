@@ -73,6 +73,8 @@ function opcuaNormalizer(req, resp) {
       newNodeID = newNodeID.replace(/;/g, "_");
       newNodeID = newNodeID.replace(/\./g, "_");
       newNodeID = newNodeID.replace(/\//g, "_");
+      newNodeID = newNodeID.replace(/\[/g, "_");
+      newNodeID = newNodeID.replace(/\]/g, "_");
       log("newNodeID: " ,newNodeID);
       // check if value changed, if not don't send
       if (previousMessage == null) {
