@@ -1,3 +1,0 @@
-ADAPTER=/opt/clearblade/adapters/opcua/opc-ua-go-adapter
-ADAPTER_LOGS=/opt/clearblade/adapters/opcua/adapter-logs.txt
-ADAPTER_PIDFILE=/opt/clearblade/adapters/opcua/opc-ua-go-adapter.pid
