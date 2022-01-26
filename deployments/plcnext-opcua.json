@@ -262,6 +262,14 @@
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
             "sync_to_edge": true,
+            "sync_to_platform": false
+        },
+        {
+            "asset_class": "users",
+            "asset_id": "",
+            "deployment": "plcnext-opcua",
+            "member": "plcnext-opcua_deployment_edge_group",
+            "sync_to_edge": true,
             "sync_to_platform": true
         },
         {
