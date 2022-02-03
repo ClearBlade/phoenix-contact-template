@@ -36,7 +36,7 @@ function manageOPCUAAdapter(req, resp) {
       }
     }
     log("adapter already running")
-  }, 30000);
+  }, 5000);
 
   var startAdapter = function() {
     opcuaAdapter.control('start', [ClearBlade.edgeId()]).then(function (results) {
