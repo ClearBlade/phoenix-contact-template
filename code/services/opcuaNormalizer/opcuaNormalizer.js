@@ -1,4 +1,4 @@
-function opcuaNormalizerNew(req, resp) {
+function opcuaNormalizer(req, resp) {
 
   if (!ClearBlade.isEdge()) {
       resp.error("only run on edge");
