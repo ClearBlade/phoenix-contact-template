@@ -54,6 +54,8 @@ function opcuaNormalizer(req, resp) {
                     customData[assetMap.opcua[key].attribute_id] = msg.data[nodeid].value;
                 }
             }
+
+            
             //TODO only send one message per asset id
             var assetModelMsg = {
                 id: assetId,
@@ -61,10 +63,7 @@ function opcuaNormalizer(req, resp) {
                 last_updated: msg.timestamp.toISOString(),
                 "type": assetType
             };
-            log(assetModelMsg);
-            log("publishing to topic: " + OUTGOING_ASSET_MODEL_TOPIC.replace("<ASSET_ID>", assetId));
-            log("publishing to topic: " + OUTGOING_DB_TOPIC.replace("<ASSET_ID>", assetId));
-            log("publishing to topic: " + OUTGOING_HISTORY_TOPIC.replace("<ASSET_ID>", assetId));
+            log("publishing following message to monitor/DB/history topics: \n" + assetModelMsg);
             cbClient.publish(OUTGOING_ASSET_MODEL_TOPIC.replace("<ASSET_ID>", assetId), JSON.stringify(assetModelMsg));
             cbClient.publish(OUTGOING_DB_TOPIC.replace("<ASSET_ID>", assetId), JSON.stringify(assetModelMsg));
             cbClient.publish(OUTGOING_DB_TOPIC_PLATFORM.replace("<ASSET_ID>", assetId), JSON.stringify(assetModelMsg));
