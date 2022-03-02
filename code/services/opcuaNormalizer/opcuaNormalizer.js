@@ -12,9 +12,6 @@ function opcuaNormalizer(req, resp) {
 		resp.error("failed to init cb client: " + e);
 	}
 
-	// const cbAssetsCol = ClearBlade.Collection("assets");
-	// const cbTagAttMapCol = ClearBlade.Collection("tag_attribute_mapping");
-
 	const cbAssetsCol = ClearBladeAsync.Collection("assets");
 	const cbTagAttMapCol = ClearBladeAsync.Collection("tag_attribute_mapping");
 
@@ -31,7 +28,7 @@ function opcuaNormalizer(req, resp) {
 	});
 
 	function processMessage(msg, topic) {
-		log("message received on: " + topic);
+		log("message received on: " + topic + ": " + msg);
 		try {
 			msg = JSON.parse(msg);
 		} catch (e) {
@@ -42,18 +39,14 @@ function opcuaNormalizer(req, resp) {
 		//TODO edge id will come in message payload
 		const edgeId = ClearBlade.edgeId();
 
-		// var assetMap = getAssetMap(edgeId);
-		// var assets = getAssets();
-		// var prefix = getPrefix(edgeId);
-
 		getAssetById(edgeId)
 			.then(function (asset) {
 				var prefix = JSON.parse(asset.custom_data).asset_prefix;
 
 				Promise.all([getAssetMap(edgeId), getAssetsByTreeId(asset.tree_id)])
-					.then(function (results) {
-						var assetMap = reults[0];
-						var assets = results[1];
+					.then(function (mapAndAssets) {
+						var assetMap = mapAndAssets[0];
+						var assets = mapAndAssets[1];
 
 						msg.timestamp = new Date(msg.server_timestamp);
 						var messagesToPublish = [];
@@ -110,11 +103,11 @@ function opcuaNormalizer(req, resp) {
 						});
 					})
 					.catch(function (error) {
-						log("Error processing message: " + error.message);
+						log("Error getting asset map and assets by tree: " + error);
 					});
 			})
 			.catch(function (error) {
-				log("Error processing message: " + error.message);
+				log("Error getting asset by id: " + error);
 			});
 	}
 
@@ -125,17 +118,17 @@ function opcuaNormalizer(req, resp) {
 			query.setPage(0, 0);
 			query.equalTo("tree_id", treeId);
 
-			cbTagAttMapCol
+			cbAssetsCol
 				.fetch(query)
 				.then(function (results) {
 					if (results.DATA.length >= 1) {
-						resolve(data.DATA);
+						resolve(results.DATA);
 					} else {
 						reject("getAssets: No rows returned from Assets collection");
 					}
 				})
 				.catch(function (error) {
-					reject("Error retrieving from Assets collection: " + error.message);
+					reject("Error retrieving from Assets collection: " + error);
 				});
 		});
 	}
@@ -144,19 +137,19 @@ function opcuaNormalizer(req, resp) {
 		return new Promise(function (resolve, reject) {
 			var assetMap = "";
 			var query = ClearBladeAsync.Query();
-			query.equalTo("edgeId", edgeId);
+			query.equalTo("edge_id", edgeId);
 
 			cbTagAttMapCol
 				.fetch(query)
 				.then(function (results) {
 					if (results.DATA.length >= 1) {
-						resolve(data.DATA[0].mappings);
+						resolve(results.DATA[0].mappings);
 					} else {
 						reject("getAssetMap: No rows returned from tag_attribute_mapping collection for id: " + edgeId);
 					}
 				})
 				.catch(function (error) {
-					reject("Error retrieving from tag_attribute_mapping collection: " + error.message);
+					reject("Error retrieving from tag_attribute_mapping collection: " + error);
 				});
 		});
 	}
@@ -171,64 +164,16 @@ function opcuaNormalizer(req, resp) {
 				.fetch(query)
 				.then(function (results) {
 					if (results.DATA.length >= 1) {
-						resolve(data.DATA[0]);
+						resolve(results.DATA[0]);
 					} else {
 						reject("getAssetById: No rows returned from Assets collection for id: " + id);
 					}
 				})
 				.catch(function (error) {
-					reject("Error retrieving from Assets collection: " + error.message);
+					reject("Error retrieving from Assets collection: " + error);
 				});
 		});
 	}
-
-	// function getAssets() {
-	// 	var assets = [];
-	// 	var query = ClearBlade.Query();
-	// 	query.setPage(0, 0);
-	// 	var callback = function (err, data) {
-	// 		if (err) {
-	// 			console.log("getAssets: No rows returned from Assets Collection");
-	// 			console.log("error : " + JSON.stringify(data));
-	// 		} else {
-	// 			assets = data.DATA;
-	// 		}
-	// 	};
-	// 	cbAssetsCol.fetch(query, callback);
-	// 	return assets;
-	// }
-
-	// function getAssetMap(edgeId) {
-	// 	var assetMap = "";
-	// 	var query = ClearBlade.Query();
-	// 	query.equalTo("edge_id", edgeId);
-	// 	var callback = function (err, data) {
-	// 		if (err) {
-	// 			console.log("getAssetMap: No rows returned from tag_attribute_mapping Collection for id: " + edgeId);
-	// 			console.log("error : " + JSON.stringify(data));
-	// 		} else {
-	// 			assetMap = data.DATA[0].mappings;
-	// 		}
-	// 	};
-	// 	cbTagAttMapCol.fetch(query, callback);
-	// 	return assetMap;
-	// }
-
-	// function getPrefix(edgeId) {
-	// 	var prefix = "";
-	// 	var query = ClearBlade.Query();
-	// 	query.equalTo("id", edgeId);
-	// 	var callback = function (err, data) {
-	// 		if (err) {
-	// 			console.log("getPrefix: No rows returned from Assets Collection for id: " + edgeId);
-	// 			console.log("error : " + JSON.stringify(data));
-	// 		} else {
-	// 			prefix = JSON.parse(data.DATA[0].custom_data).asset_prefix;
-	// 		}
-	// 	};
-	// 	cbAssetsCol.fetch(query, callback);
-	// 	return prefix;
-	// }
 
 	function searchById(idKey, myArray) {
 		for (var i = 0; i < myArray.length; i++) {
