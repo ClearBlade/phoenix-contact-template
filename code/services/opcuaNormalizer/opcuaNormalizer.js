@@ -1,9 +1,4 @@
 function opcuaNormalizer(req, resp) {
-	//TODO edge id will come in message payload
-	//can remove dependency on clearblade library when done
-	if (!ClearBlade.isEdge()) {
-		resp.error("only run on edge");
-	}
 
 	var cbClient;
 	try {
@@ -36,8 +31,7 @@ function opcuaNormalizer(req, resp) {
 			return;
 		}
 
-		//TODO edge id will come in message payload
-		const edgeId = ClearBlade.edgeId();
+		const edgeId = msg.edge_id;
 
 		getAssetById(edgeId)
 			.then(function (asset) {
