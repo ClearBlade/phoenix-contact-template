@@ -1,4 +1,7 @@
 function opcuaNormalizer(req, resp) {
+	if (!ClearBlade.isEdge()) {
+		resp.error("only run on edge");
+	}
 
 	var cbClient;
 	try {
@@ -31,7 +34,7 @@ function opcuaNormalizer(req, resp) {
 			return;
 		}
 
-		const edgeId = msg.edge_id;
+		const edgeId = ClearBlade.edgeId();
 
 		getAssetById(edgeId)
 			.then(function (asset) {
