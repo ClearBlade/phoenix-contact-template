@@ -1,13 +1,11 @@
 {
-    "auto_balance": true,
-    "auto_restart": true,
-    "concurrency": 1,
-    "dependencies": "log,clearblade,mqtt",
-    "execution_timeout": -1,
-    "logging_enabled": true,
-    "name": "opcuaNormalizer",
-    "params": [
-        ""
-    ],
-    "run_user": ""
+	"auto_balance": true,
+	"auto_restart": true,
+	"concurrency": 1,
+	"dependencies": "log,clearblade,mqtt,clearblade_async",
+	"execution_timeout": -1,
+	"logging_enabled": true,
+	"name": "opcuaNormalizer",
+	"params": [""],
+	"run_user": ""
 }
