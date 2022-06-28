@@ -1,13 +1,13 @@
 {
-    "auto_balance": true,
-    "auto_restart": true,
-    "concurrency": 1,
-    "dependencies": "log,clearblade,clearblade_async",
-    "execution_timeout": -1,
-    "logging_enabled": true,
-    "name": "manageOPCUAAdapter",
-    "params": [
-        ""
-    ],
-    "run_user": ""
+  "auto_balance": true,
+  "auto_restart": true,
+  "concurrency": 1,
+  "dependencies": "log,clearblade,clearblade_async",
+  "execution_timeout": -1,
+  "logging_enabled": true,
+  "name": "manageOPCUAAdapter",
+  "params": [""],
+  "run_user": "",
+  "run_on_edge": true,
+  "run_on_platform": false
 }

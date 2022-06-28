@@ -13,19 +13,17 @@
  */
 
 function manageOPCUAAdapter(req, resp) {
-
   var ADAPTER_PROCESS_NAME = "opc-ua-go-adapter";
-  
-  var opcuaAdapter = ClearBladeAsync.Adapter('opcua');
-  
-  if (!ClearBlade.isEdge()) {
-    resp.error("only run on edge");
-  }
 
-  setInterval(function() {
+  var opcuaAdapter = ClearBladeAsync.Adapter("opcua");
+
+  setInterval(function () {
     log("checking if adapter is running");
     try {
-      var results = child_process.execSync("pgrep -f " + ADAPTER_PROCESS_NAME, {});
+      var results = child_process.execSync(
+        "pgrep -f " + ADAPTER_PROCESS_NAME,
+        {}
+      );
     } catch (e) {
       if (e.status === 1) {
         log("adapter process not found, starting it");
@@ -35,15 +33,17 @@ function manageOPCUAAdapter(req, resp) {
         resp.error("unexpected error from pgrep:  " + JSON.stringify(e));
       }
     }
-    log("adapter already running")
+    log("adapter already running");
   }, 5000);
 
-  var startAdapter = function() {
-    opcuaAdapter.control('start', [ClearBlade.edgeId()]).then(function (results) {
-      log("adapter started");
-    }).catch(function (e) {
-      resp.error("failed to start adapter: " + e.message);
-    });
-  }
+  var startAdapter = function () {
+    opcuaAdapter
+      .control("start", [ClearBlade.edgeId()])
+      .then(function (results) {
+        log("adapter started");
+      })
+      .catch(function (e) {
+        resp.error("failed to start adapter: " + e.message);
+      });
+  };
 }
-
