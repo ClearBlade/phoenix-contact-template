@@ -1,2 +1,7 @@
 data/tag_attribute_mapping.json
 system.json
+.cb-cli/cbmeta
+.cb-cli/remotes
+.cb-cli/map-name-to-id/collections.json
+.cb-cli/map-name-to-id/roles.json
+.cb-cli/map-name-to-id/users.json
