@@ -1,8 +1,8 @@
 {
-    "description": "",
-    "frequency": 900,
-    "name": "edge_metrics_timer",
-    "repeats": -1,
-    "service_name": "getEdgeMetrics",
-    "start_time": "2021-11-02T21:56:34.996Z"
+  "description": "",
+  "frequency": 900,
+  "name": "edge_metrics_timer",
+  "repeats": -1,
+  "service_name": "getEdgeMetrics",
+  "start_time": "2021-11-02T21:56:34.996Z"
 }

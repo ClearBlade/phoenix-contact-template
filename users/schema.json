@@ -51,13 +51,33 @@
             "PK": false
         },
         {
+            "ColumnName": "terms_agreement",
+            "ColumnType": "jsonb",
+            "PK": false
+        },
+        {
             "ColumnName": "app_tour",
             "ColumnType": "jsonb",
             "PK": false
         },
         {
-            "ColumnName": "terms_agreement",
-            "ColumnType": "jsonb",
+            "ColumnName": "email_validated",
+            "ColumnType": "bool",
+            "PK": false
+        },
+        {
+            "ColumnName": "phone_validated",
+            "ColumnType": "bool",
+            "PK": false
+        },
+        {
+            "ColumnName": "two_factor_method",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "two_factor_enabled",
+            "ColumnType": "bool",
             "PK": false
         }
     ]

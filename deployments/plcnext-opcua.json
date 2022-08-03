@@ -5,6 +5,7 @@
             "asset_id": "opcuaAdapter",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -13,6 +14,7 @@
             "asset_id": "rule_duration_cache",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -21,6 +23,7 @@
             "asset_id": "opcuaNormalizer",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -29,6 +32,7 @@
             "asset_id": "testEdgeMetrics",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": false
         },
@@ -37,6 +41,7 @@
             "asset_id": "getEdgeMetrics",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": false
         },
@@ -45,6 +50,7 @@
             "asset_id": "invalidateRulesAndTypes",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -53,6 +59,7 @@
             "asset_id": "actionEmitter",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -61,6 +68,7 @@
             "asset_id": "assetHistory",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -69,6 +77,7 @@
             "asset_id": "assetLocationAndStatus",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -77,6 +86,7 @@
             "asset_id": "clearDurationCache",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -85,6 +95,7 @@
             "asset_id": "handleRulesEngineUpdates",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -93,6 +104,7 @@
             "asset_id": "handleRulesEntityUpdates",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -101,6 +113,7 @@
             "asset_id": "manageOPCUAAdapter",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -109,6 +122,7 @@
             "asset_id": "rulesEngine",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -117,6 +131,7 @@
             "asset_id": "traverseForInvalidRules",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -125,6 +140,7 @@
             "asset_id": "readOPCUATags",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -133,6 +149,7 @@
             "asset_id": "updateAssetTypeCache",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -141,6 +158,7 @@
             "asset_id": "groupFilterLib",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -149,6 +167,7 @@
             "asset_id": "LoggerLib",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -157,6 +176,7 @@
             "asset_id": "MailgunConstants",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -165,6 +185,7 @@
             "asset_id": "PasswordResetConfig",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -173,6 +194,7 @@
             "asset_id": "Base64",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -181,6 +203,7 @@
             "asset_id": "Mailgun",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -189,6 +212,7 @@
             "asset_id": "NormalizerLib",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -197,6 +221,7 @@
             "asset_id": "TwilioSMSLib",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -205,6 +230,7 @@
             "asset_id": "CryptoLib",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -213,6 +239,7 @@
             "asset_id": "BandwidthSMSLib",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -221,6 +248,7 @@
             "asset_id": "SMSConfig",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -229,6 +257,7 @@
             "asset_id": "edge_metrics",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": false
         },
@@ -237,6 +266,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -245,6 +275,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -253,6 +284,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -261,6 +293,7 @@
             "asset_id": "opcua",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": false
         },
@@ -269,6 +302,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -277,6 +311,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -285,6 +320,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": false,
             "sync_to_platform": true
         },
@@ -293,6 +329,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": false,
             "sync_to_platform": true
         },
@@ -301,6 +338,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -309,6 +347,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -317,6 +356,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -325,6 +365,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -333,6 +374,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -341,6 +383,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -349,6 +392,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -357,6 +401,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": false,
             "sync_to_platform": true
         },
@@ -365,6 +410,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -373,6 +419,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": false,
             "sync_to_platform": true
         },
@@ -381,6 +428,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -389,6 +437,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -397,6 +446,7 @@
             "asset_id": "",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -405,6 +455,7 @@
             "asset_id": "AssetTypeCache",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -413,6 +464,7 @@
             "asset_id": "Teams",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -421,6 +473,7 @@
             "asset_id": "TeamsConfig",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -429,6 +482,7 @@
             "asset_id": "mailgunNPM",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": true
         },
@@ -437,6 +491,7 @@
             "asset_id": "edge_metrics_timer",
             "deployment": "plcnext-opcua",
             "member": "plcnext-opcua_deployment_edge_group",
+            "sync_schema_only": false,
             "sync_to_edge": true,
             "sync_to_platform": false
         }
